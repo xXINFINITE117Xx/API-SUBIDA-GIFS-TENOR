@@ -19,7 +19,7 @@ const App = () => {
               limit: 20,
             },
           });
-          console.log("Datos recibidos:", response.data); 
+          console.log("Datos recibidos:", response.data);
           setGifs(response.data.results);
         } catch (error) {
           console.error("Error fetching GIFs:", error);
