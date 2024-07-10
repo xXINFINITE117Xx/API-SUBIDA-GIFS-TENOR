@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .gif-item {
@@ -18,6 +19,7 @@
 .gif-item img {
   max-width: 200px;
   height: auto;
+  cursor: pointer;
 }
 
 
