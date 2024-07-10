@@ -36,6 +36,7 @@ const App = () => {
     <div>
       <h1>Search GIF</h1>
       <input
+        className="input-search"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
