@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.gif-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gif-item {
+  margin: 10px;
+}
+
+.gif-item img {
+  max-width: 200px;
+  height: auto;
+}
+
+
