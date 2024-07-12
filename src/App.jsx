@@ -9,6 +9,28 @@ const App = () => {
   const API_KEY = "AIzaSyAx8kKbyjd8ZfU1NfOrsbyiCn5Qid3eg4c";
 
   useEffect(() => {
+    const fetchRandomGifs = async () => {
+      try {
+        const response = await axios.get("https://g.tenor.com/v2/featured", {
+          params: {
+            key: API_KEY,
+            limit: 20,
+          },
+        });
+        console.log("Datos recibidos:", response.data);
+        setGifs(response.data.results);
+      } catch (error) {
+        console.error("Error fetching random GIFs:", error);
+        if (error.response && error.response.status === 401) {
+          console.error("Unauthorized: Check your API key");
+        }
+      }
+    };
+
+    fetchRandomGifs();
+  }, [API_KEY]);
+
+  useEffect(() => {
     if (query.trim() !== "") {
       const fetchGifs = async () => {
         try {
@@ -19,7 +41,7 @@ const App = () => {
               limit: 20,
             },
           });
-          console.log("Datos recibidos:", response.data);
+          console.log("Datos recibidos:", response.data); 
           setGifs(response.data.results);
         } catch (error) {
           console.error("Error fetching GIFs:", error);
@@ -30,13 +52,12 @@ const App = () => {
       };
       fetchGifs();
     }
-  }, [query]);
+  }, [query, API_KEY]);
 
   return (
     <div>
       <h1>Search GIF</h1>
       <input
-        className="input-search"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
