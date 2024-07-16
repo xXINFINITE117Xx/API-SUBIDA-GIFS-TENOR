@@ -7,6 +7,8 @@
 
 .gif-list {
   display: flex;
+  background-color: #00d9c4;
+  border-radius: 2%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -16,10 +18,58 @@
   margin: 10px;
 }
 
+.input-search {
+  background-color: white;
+  color: black;
+}
+
 .gif-item img {
   max-width: 200px;
   height: 286px;
+  border-radius: 5%;
   cursor: pointer;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  animation: ColorAnimation infinite 5s;
+}
+
+.paragraph {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  animation: ColorAnimation infinite 5s;
+}
+
+@keyframes ColorAnimation {
+  0% {
+    color: yellow;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: blueviolet;
+  }
 }
 
 .input-search {

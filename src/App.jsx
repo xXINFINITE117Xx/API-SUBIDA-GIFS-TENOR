@@ -41,7 +41,7 @@ const App = () => {
               limit: 20,
             },
           });
-          console.log("Datos recibidos:", response.data); 
+          console.log("Datos recibidos:", response.data);
           setGifs(response.data.results);
         } catch (error) {
           console.error("Error fetching GIFs:", error);
@@ -58,11 +58,13 @@ const App = () => {
     <div>
       <h1>Search GIF</h1>
       <input
+        className="input-search"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search for GIFs"
       />
+      <p className="paragraph">Search any GIF that you want</p>
       <GifList gifs={gifs} />
     </div>
   );
