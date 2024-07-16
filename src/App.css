@@ -8,6 +8,7 @@
 .gif-list {
   display: flex;
   background-color: #00d9c4;
+  box-shadow: 0 0 10px white;
   border-radius: 2%;
   flex-wrap: wrap;
   justify-content: center;
